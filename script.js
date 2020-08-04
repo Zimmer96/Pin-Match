@@ -72,6 +72,7 @@ submitBtn.addEventListener("click",function () {
         notifyWrong.style.display = 'none';
         const notifySuccess = document.getElementById("notity-success");
         notifySuccess.style.display = 'block';
+        alert("✅ Congratulations,pin Matched... Secret door is opening for you")
         
     }
     // when not matching the user input
@@ -82,10 +83,12 @@ submitBtn.addEventListener("click",function () {
          notifySuccess.style.display = 'none';
          totalTry--;
          tryLeft.innerText = totalTry;
+         alert("❌ Pin Didn't Match, Please try again");
     }
     // when the button is disabled
     if (totalTry == 0) {
         submitBtn.disabled = true;
         submitBtn.style.backgroundColor = '#3d4153';
+        alert("Too many wrong attempts,your submit button is currently disabled");
       }
 })
